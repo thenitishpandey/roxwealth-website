@@ -5,8 +5,8 @@ const HeroSection = () => {
     return (
         <div className="main-page">
             <div className="main-container">
-                <div className="main-image">
-                    <img src="./public/image2.jpeg" alt="main" />
+                <div className='w-full h-screen bg-cover'>
+                    <img className='w-full h-screen bg-cover bg-fixed' src="./public/image2.jpeg" alt="main" />
                 </div>
                 <div className="main-text">
                     {/* introduction text */}
