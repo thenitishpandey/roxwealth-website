@@ -21,23 +21,23 @@ const MainHeader = () => {
     };
 
     return (
-        <header className="header">
-            <div className="header-container">
-                <div className="header-logo">
-                    <img src="./src/assets/Logo.png" alt="logo" className="main-logo" />
+        <header className=''>
+            <div className='flex flex-row bg-slate-300 justify-between'>
+                <div className='w-40'>
+                    <img src="./src/assets/Logo.png" alt="logo" />
                 </div>
-                <nav className="header-nav">
-                    <a href="/" className="header-nav-item">
+                <nav className='flex flex-row justify-start items-center text-lg'>
+                    <a className='mx-10 rounded-md hover:bg-slate-400 px-4 py-2' href="/" >
                         Home
                     </a>
-                    <a href="#about" className="header-nav-item">
+                    <a className='mx-10 rounded-md hover:bg-slate-400 px-4 py-2' href="#about" >
                         About
                     </a>
-                    <a href="#contact" className="header-nav-item">
+                    <a className='mx-10 rounded-md hover:bg-slate-400 px-4 py-2' href="#contact">
                         Contact
                     </a>
                 </nav>
-                <div className="header-btn">
+                <div className='flex justify-end items-center border-green-700 border-2 m-4 rounded-xl hover:bg-green-400 font-semibold bg-green-600'>
                     <button
                         className="text-white px-4 py-2 rounded focus:outline-none"
                         onClick={handleAccountClick}
