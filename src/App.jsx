@@ -5,13 +5,6 @@ import UserPage from './UserPage'
 import AdminPage from './AdminPage'
 import './App.css'
 
-import './assets/About.css';
-import './assets/Contacts.css';
-import './assets/Header.css';
-import './assets/LoginSignup.css';
-import "./assets/HeroSection.css"
-
-
 function App() {
 
   return (
