@@ -14,6 +14,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/user" element={<UserPage />} />
           <Route path="/admin" element={<AdminPage />} />
+          <Route path='/profile' element={<UserPage />} />
         </Routes>
       </BrowserRouter>
     </div>

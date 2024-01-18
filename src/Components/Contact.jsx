@@ -25,78 +25,67 @@ const Contact = () => {
     };
 
     return (
-        <>
-            <div className='bg-slate-500'>
-                <div className='flex flex-row justify-between'>
+        <div className="contact flex flex-row m-5 p-5 rounded-lg bg-gray-600" id="contact">
+            <div className="w-1/2 bg-white p-8 rounded-lg">
+                <h2 className="text-3xl mb-6 font-bold text-gray-800">Message Us</h2>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full p-2 mb-3 rounded border-2 border-gray-400 border-solid"
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full p-2 mb-3 rounded border-2 border-gray-400 border-solid"
+                    />
+                    <textarea
+                        name="message"
+                        cols="30"
+                        rows="10"
+                        placeholder="Your Message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="w-full p-2 mb-3 rounded border-2 border-gray-400 border-solid"
+                    ></textarea>
+                    <button type="submit" className="w-full p-3 text-white bg-green-700 rounded">
+                        Send
+                    </button>
+                </form>
+                {success && <p className="mt-4 text-green-700">Message Sent Successfully</p>}
+            </div>
 
-                    {/* form container */}
-
-                    <div className='flex flex-col items-center m-10 p-10 justify-between bg-red-600'>
-                        <h2 className='font-semibold p-2 text-lg'>Message Us</h2>
-                        <form className="flex flex-col justify-between" onSubmit={handleSubmit}>
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Your Name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                className='m-2 p-1 rounded-md'
-                            />
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Your Email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                className='m-2 p-1 rounded-md'
-                            />
-                            <textarea
-                                name="message"
-                                cols="30"
-                                rows="10"
-                                placeholder="Your Message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                className='h-16 rounded-xl m-2 p-2'
-                            ></textarea>
-                            <button type="submit" className='border-2 w- m-2 p-2 rounded-md bg-green-400'>Send</button>
-                        </form>
-                        {success && <p className="success-message">Message Sent Successfully</p>}
-                    </div>
-
-                    {/* social media container */}
-
-                    <div className="flex items-center justify-between bg-blue-600 m-10 p-10">
-                        <div className='flex flex-col'>
-                            <h1 className='font-semibold text-lg'>Contact Details</h1>
-
-                            {/* Email Support */}
-                            <div className='flex flex-row m-4'>
-                                <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="email" className="contact-icon" />
-                                <p className='p-2'>support@qberi.com</p>
-                            </div>
-
-                            {/* Phone Support */}
-                            <div className='flex flex-row m-4'>
-                                <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="phone" className="contact-icon" />
-                                <p className='p-2'>1234567890</p>
-                            </div>
-
-                            {/* Location */}
-                            <div className='flex flex-row m-4'>
-                                <img src="https://img.icons8.com/ios-filled/50/000000/worldwide-location.png" alt="location" className="contact-icon" />
-                                <p className='p-2'>123, ABC Street, XYZ City, Country</p>
-                            </div>
-                        </div>
-                    </div>
-
-
+            <div className="w-1/2 bg-slate-200 p-8 rounded-lg text-xl">
+                <h2 className="text-3xl mb-6 font-bold text-black">Contact Details</h2>
+                <div className="flex mb-4">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="email" className="mr-3 size-9" />
+                    <p className="text-black">support @qberi.com</p>
+                </div>
+                <div className="flex  mb-4">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="phone" className="mr-3 size-9" />
+                    <p className="text-black">1234567890</p>
+                </div>
+                <div className="flex">
+                    <img
+                        src="https://img.icons8.com/ios-filled/50/000000/worldwide-location.png"
+                        alt="location"
+                        className="mr-3 size-9"
+                    />
+                    <p className="text-black">
+                        5919 Wellington Rd.<br />
+                        Boulder, Colorado,<br />
+                        80301<br />
+                        United States of America
+                    </p>
                 </div>
             </div>
-            <footer className='flex justify-center'>
-                <p className="footer-text">Copyright @ RoxWealth 2024</p>
-            </footer>
-        </>
+        </div>
     );
 };
 
